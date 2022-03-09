@@ -2,6 +2,7 @@ import { DataTable, Given, Then, When } from '@cucumber/cucumber'
 import { Actor } from '@serenity-js/core'
 import { ChangeApiConfig } from '@serenity-js/rest'
 import { SendOTP } from '../tasks/SendOTP'
+import { VerifyOTP } from '../tasks/VerifyOTP'
 
 Given(
   '{actor} is at the D7 verify url',
@@ -19,6 +20,6 @@ When('{pronoun} send OTP', async (actor: Actor, table: DataTable) => {
       await actor.attemptsTo(SendOTP.toMobileNumber(expiry, message, mobile, sender_id))
 })
 
-Then('{pronoun} is able to a OTP Verification', async (actor: Actor) => {
-  //  await actor.attemptsTo()
+Then('{pronoun} is able to get OTP verification', async (actor: Actor) => {
+  await actor.attemptsTo(VerifyOTP.hasSuccessfulStatus(201))
 })

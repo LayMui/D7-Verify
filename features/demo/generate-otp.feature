@@ -12,6 +12,6 @@ Scenario: Able to send OTP to mobile number
     When he send OTP 
     | expiry | message                 | mobile       | sender_id |
     | 900    | Your otp code is {code} | 971562316353 | SMSInfo   |
-    Then he is able to a OTP Verification
+    Then he is able to get OTP verification
 
   
