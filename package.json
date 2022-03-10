@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yaradigitallabs/sh-common-services-serenityjs.git"
+    "url": "git+https://github.com/LayMui/D7-Verify.git"
   },
   "keywords": [
     "serenity-js",
